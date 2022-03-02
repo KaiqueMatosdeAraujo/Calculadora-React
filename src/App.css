@@ -2,9 +2,11 @@
     font-family: Arial, Helvetica, sans-serif
 }
 
+
+
 body {
-    background: linear-gradient(to right, rgb(31, 31, 31), rgb(41, 46, 73));
-    color: #fff;
+    background: linear-gradient(to left, rgb(72, 39, 216), rgb(58, 1, 1));
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;

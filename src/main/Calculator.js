@@ -1,12 +1,19 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import './Calculator.css'
 import Display from '../components/Display/Display'
 import Button from '../components/Button/Button'
 
+
+
+
 class Calculator extends Component {
 
     state = {
-        displayValue: '0',
+        
+        numA: null,
+        numB: null,
+        displayValue: ''
+        
     }
 
     clearMemory = () => {
@@ -14,11 +21,48 @@ class Calculator extends Component {
     }
 
     setOperation = (operation) => {
-        this.setState({displayValue: operation})
+        //this.setState({displayValue: operation})
+        console.log(this.state.numA, this.state.numB)
+       
+        if (operation == "-"){
+            let resultado = this.state.numA - this.state.numB
+            this.setState({displayValue: resultado})
+            return resultado
+        }
+        else if (operation == "+"){
+            let resultado= this.state.numA + this.state.numB
+            this.setState({displayValue: resultado})
+            return resultado
+        }
+        else if (operation == "*"){
+            let resultado= this.state.numA * this.state.numB
+            this.setState({displayValue: resultado})
+            return resultado
+        }
+        else if (operation == "/"){
+            let resultado= this.state.numA / this.state.numB
+            this.setState({displayValue: resultado})
+            return resultado
+        }
+        else if (operation == "/"){
+            let resultado= this.state.numA / this.state.numB
+            this.setState({displayValue: resultado})
+            return resultado
+        }
+        
     }
 
     addDigit = (digit) => {
-        this.setState({displayValue: digit})
+       if (this.state.numA == null) {
+           this.setState({numA: parseInt(digit)}
+           )
+           return
+
+       }else {this.state.numA = this.state.numB}
+
+
+
+        this.state.numB = parseInt(digit)
     }
 
     render() {

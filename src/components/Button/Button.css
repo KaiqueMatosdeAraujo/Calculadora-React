@@ -1,9 +1,9 @@
 :root {
-    --bg-button: #f0f0f0;
+    --bg-button: #423f3f;
     --bg-button-active: #ccc;
     --border-button: solid 1px #888;
-    --bg-operation: #fa8231;
-    --bg-operation-active: #fa8131cc;
+    --bg-operation: #261572;
+    --bg-operation-active: #d81f1fcc;
 }
 
 .button {
@@ -13,6 +13,7 @@
     border-right: var(--border-button);
     border-bottom: var(--border-button);
     outline: none;
+    color:#fff;
 }
 
 .button:active {

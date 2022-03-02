@@ -1,10 +1,15 @@
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('/src/fonts/digital-dream.regular.ttf');
+   }
 .display {
     grid-column: span 4;
-    background-color: #0004;
+    background-color: rgb(112, 112, 112);
     display:flex;
     justify-content: flex-end;
     align-items: center;
     padding: 20px;
     font-size: 2.1em;
     overflow: hidden;
+   font-family:digital-dream;
 }
